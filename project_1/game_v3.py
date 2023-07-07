@@ -4,7 +4,6 @@
 
 import numpy as np
 
-
 def game_core_v3(number: int = 1) -> int:
     """
     Args:
@@ -13,9 +12,7 @@ def game_core_v3(number: int = 1) -> int:
     Returns:
         int: Число попыток
     """
-    # Ваш код начинается здесь
     count = 0
-    number = np.random.randint(1, 101)
     min = 0
     max = 100
     while True:
@@ -27,9 +24,9 @@ def game_core_v3(number: int = 1) -> int:
             min = predict
         elif number < predict:
             max = predict
-    # Ваш код заканчивается здесь
-
+            
     return count
+print(f'Количество попыток: {random_predict()}')
 
 def score_game(game_core_v3) -> int:
     """За какое количство попыток в среднем за 1000 подходов угадывает наш алгоритм
